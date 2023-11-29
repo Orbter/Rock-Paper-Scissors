@@ -10,16 +10,12 @@
 }
 .choice-humen {
   flex-direction: column;
-  width: 200px;
-  height: 200px;
 }
 
 .choice-computer {
   flex-direction: column;
-  width: 200px;
-  height: 200px;
 }
-.players-imgchoice {
+.question-mark {
   width: 200px;
   height: 200px;
 }

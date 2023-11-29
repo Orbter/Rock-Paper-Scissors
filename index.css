@@ -1,0 +1,33 @@
+.body {
+}
+.flex {
+  display: flex;
+  justify-content: center;
+}
+.main {
+  flex-direction: column;
+  align-items: center;
+}
+.choice-humen {
+  flex-direction: column;
+  width: 200px;
+  height: 200px;
+}
+
+.choice-computer {
+  flex-direction: column;
+  width: 200px;
+  height: 200px;
+}
+.players-imgchoice {
+  width: 200px;
+  height: 200px;
+}
+.player-buttons {
+  width: 200px;
+  height: 200px;
+}
+.move-player {
+  width: 200px;
+  height: 200px;
+}

@@ -109,3 +109,17 @@ function playRound(playerMove) {
 
   round++;
 }
+function restartGame() {
+  playerScore = 0;
+  computerScore = 0;
+  round = 1;
+  document.querySelector(
+    ".humen-score"
+  ).textContent = `player score: ${playerScore}`;
+  document.querySelector(
+    ".computer-score"
+  ).textContent = `computer score: ${computerScore}`;
+  changepicture("./images/question-mark.png");
+  changepicture_computer("./images/question-mark.png");
+}
+document.getElementById("restart").addEventListener("click", restartGame);

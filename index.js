@@ -28,7 +28,6 @@ let myImg;
 function playRound(playerMove) {
   let x = playerMove;
   let y = getComputerChoice();
-
   console.log(`round ${round}`);
   if (x === "Rock") {
     changepicture("./images/meteore.png");
@@ -108,7 +107,17 @@ function playRound(playerMove) {
   ).textContent = `computer score: ${computerScore}`;
 
   round++;
+  setTimeout(() => {
+    if (computerScore === 3) {
+      alert("You Lost...");
+      restartGame();
+    } else if (playerScore === 3) {
+      alert("You Won!");
+      restartGame();
+    }
+  }, 0);
 }
+
 function restartGame() {
   playerScore = 0;
   computerScore = 0;
@@ -121,5 +130,6 @@ function restartGame() {
   ).textContent = `computer score: ${computerScore}`;
   changepicture("./images/question-mark.png");
   changepicture_computer("./images/question-mark.png");
+  document.querySelector(".match-resoult").textContent = "Choose your weapon";
+  document.querySelector(".match-contex").textContent = "First to score 3 wins";
 }
-document.getElementById("restart").addEventListener("click", restartGame);

@@ -8,75 +8,82 @@
     <script src="index.js" defer></script>
   </head>
   <body>
-    <h1 class="headline flex">Rock Paper Scissors Space adittion!</h1>
-
+    <h1 class="headline flex">Rock Paper Scissors Space adittion</h1>
+    <div id="overlay"></div>
     <div class="main flex">
-      <h2>First to score 5 wins</h2>
-      <h3>Choose your weapon</h3>
-      <h4 class="match-resoult">match-resoult</h4>
-      <h4 class="match-contex">match-contex</h4>
-      <div class="players-choices flex">
-        <div class="choice-humen flex">
-          <div class="players-imgchoice">
-            <img
-              class="question-mark"
-              id="question-mark-player"
-              src="./images/question-mark.png"
-              alt="question-mark"
-            />
-          </div>
-          <p class="humen-score">player score: 0</p>
+        <div class="PopUp" id="PopUp-model">
+            <div class="PopUp-head">poding amen</div>
+            <div class="PopUp-body">
+              <button class="try-again">Try Again!</button>
+            </div>  
         </div>
-        <div class="choice-computer flex">
-          <div class="computer-imgchoice">
-            <img
-              class="question-mark"
-              id="question-mark-computer"
-              src="./images/question-mark.png"
-              alt="question-mark"
-            />
+        <h4 class="match-resoult">Choose your weapon</h4>
+        <h4 class="match-contex">First to score 3 wins</h4>
+        <div class="players-choices flex">
+          <div class="choice-humen flex">
+            <div class="players-imgchoice">
+              <img
+                class="question-mark"
+                id="question-mark-player"
+                src="./images/question-mark.png"
+                alt="question-mark"
+              />
+            </div>
+            <p class="humen-score">player score: 0</p>
           </div>
-          <p class="computer-score">computer score: 0</p>
+          <div class="choice-computer flex">
+            <div class="computer-imgchoice">
+              <img
+                class="question-mark"
+                id="question-mark-computer"
+                src="./images/question-mark.png"
+                alt="question-mark"
+              />
+            </div>
+            <p class="computer-score">computer score: 0</p>
+          </div>
         </div>
-      </div>
-      <div class="moves flex">
-        <button
-          class="player-buttons"
-          id="Rock"
-          type="button"
-          onclick="playRound('Rock')"
-        >
-          <img
-            class="move-player"
-            src="./images/meteore.png"
-            alt="meteore image (Rock)"
-          />
-        </button>
-        <button
-          class="player-buttons"
-          id="Paper"
-          type="button"
-          onclick="playRound('Paper')"
-        >
-          <img
-            class="move-player"
-            src="./images/hologram.png"
-            alt="hologram image (Paper)"
-          />
-        </button>
-        <button
-          class="player-buttons"
-          id="Scissors"
-          type="button"
-          onclick="playRound('Scissors')"
-        >
-          <img
-            class="move-player"
-            src="./images/lightsaber.png"
-            alt="two lightsaber (Scissors)"
-          />
-        </button>
-        <button id="restart">restart buttone</button>
+        <div class="moves flex">
+          <button
+            class="player-buttons"
+            id="Rock"
+            type="button"
+            onclick="playRound('Rock')"
+          >
+            <img
+              class="move-player"
+              src="./images/meteore.png"
+              alt="meteore image (Rock)"
+            />
+          </button>
+          <button
+            class="player-buttons"
+            id="Paper"
+            type="button"
+            onclick="playRound('Paper')"
+          >
+            <img
+              class="move-player"
+              src="./images/hologram.png"
+              alt="hologram image (Paper)"
+            />
+          </button>
+          <button
+            class="player-buttons"
+            id="Scissors"
+            type="button"
+            onclick="playRound('Scissors')"
+          >
+            <img
+              class="move-player"
+              src="./images/lightsaber.png"
+              alt="two lightsaber (Scissors)"
+            />
+          </button>
+          <button class="move-player" id="restart" onclick="restartGame()">
+            restart buttone
+          </button>
+        </div>
       </div>
     </div>
   </body>

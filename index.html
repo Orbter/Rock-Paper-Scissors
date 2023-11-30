@@ -4,8 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock Paper Scissors</title>
+    <link rel="shortcut icon" type= "x-icon" href="./images/icons8-alien-96.png">
     <link rel="stylesheet" href="index.css" />
     <script src="index.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600&family=Pixelify+Sans:wght@400;500;600;700&family=Poppins:ital,wght@0,200;0,500;0,600;0,700;1,500;1,600;1,700&family=Roboto+Condensed:wght@300;400;500;600&family=Roboto+Mono:ital,wght@0,500;0,600;1,500&family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
   </head>
   <body>
     <h1 class="headline flex">Rock Paper Scissors Space adittion</h1>
@@ -14,7 +18,7 @@
         <div class="PopUp" id="PopUp-model">
             <div class="PopUp-head">poding amen</div>
             <div class="PopUp-body">
-              <button class="try-again">Try Again!</button>
+              <button class="try-again" onclick="CloseEndGamePopUp(), restartGame()">Try Again!</button>
             </div>  
         </div>
         <h4 class="match-resoult">Choose your weapon</h4>

@@ -25,6 +25,9 @@ const roundTowin = 3;
 let round = 1;
 let newImg;
 let myImg;
+const EndGamePopUp = document.getElementById("PopUp-model");
+const overlay = document.getElementById("overlay");
+
 function playRound(playerMove) {
   let x = playerMove;
   let y = getComputerChoice();
@@ -109,11 +112,11 @@ function playRound(playerMove) {
   round++;
   setTimeout(() => {
     if (computerScore === 3) {
-      alert("You Lost...");
-      restartGame();
+      document.querySelector(".PopUp-head").textContent = "You Lose...";
+      OpenEndGamePopUp();
     } else if (playerScore === 3) {
-      alert("You Won!");
-      restartGame();
+      document.querySelector(".PopUp-head").textContent = "You Win!";
+      OpenEndGamePopUp();
     }
   }, 0);
 }
@@ -132,4 +135,12 @@ function restartGame() {
   changepicture_computer("./images/question-mark.png");
   document.querySelector(".match-resoult").textContent = "Choose your weapon";
   document.querySelector(".match-contex").textContent = "First to score 3 wins";
+}
+function OpenEndGamePopUp() {
+  EndGamePopUp.classList.add("active");
+  overlay.classList.add("active");
+}
+function CloseEndGamePopUp() {
+  EndGamePopUp.classList.remove("active");
+  overlay.classList.remove("active");
 }
